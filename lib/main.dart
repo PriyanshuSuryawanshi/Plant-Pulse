@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const PlantPulseApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class PlantPulseApp extends StatelessWidget {
+  const PlantPulseApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Plant Pulse',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green.shade900),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Plant Pulse'),
