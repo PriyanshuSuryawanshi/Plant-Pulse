@@ -22,4 +22,4 @@ Plant Pulse is a mobile application developed using Flutter, aimed at helping us
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/PriyanshuSuryawanshi/Plant-Pulse
+git clone https://github.com/PriyanshuSuryawanshi/Plant-Pulse.git
