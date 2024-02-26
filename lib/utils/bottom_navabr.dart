@@ -12,26 +12,26 @@ class BottomNav extends StatefulWidget {
 }
 
 class _BottomNavState extends State<BottomNav> {
-  int selected_screen_index = 0;
+  int selectedScreenIndex = 0;
   PageController pagecontroller = PageController();
 
   void onTapped(int index) {
     setState(() {
-      selected_screen_index = index;
+      selectedScreenIndex = index;
     });
-    pagecontroller.jumpToPage(selected_screen_index);
+    pagecontroller.jumpToPage(selectedScreenIndex);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Plant Pulse'),
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      //   title: const Text('Plant Pulse'),
+      // ),
       body: PageView(
         controller: pagecontroller,
-        children: [
+        children: const [
           HomeScreen(),
           RoutineScreen(),
           HealthScreen(),
@@ -47,7 +47,8 @@ class _BottomNavState extends State<BottomNav> {
               icon: Icon(Icons.medication_rounded), label: 'Health'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
-        currentIndex: selected_screen_index,
+        showSelectedLabels: false,
+        currentIndex: selectedScreenIndex,
         selectedItemColor: Colors.green,
         unselectedItemColor: Colors.grey,
         onTap: onTapped,

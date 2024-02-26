@@ -16,7 +16,7 @@ class PlantPulseApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green.shade900),
         useMaterial3: true,
       ),
-      home: BottomNav(),
+      home: const BottomNav(),
     );
   }
 }

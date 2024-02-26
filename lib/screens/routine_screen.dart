@@ -10,11 +10,9 @@ class RoutineScreen extends StatefulWidget {
 class _RoutineScreenState extends State<RoutineScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
-        child: Container(
-          child: Text('ROUTINE SCREEN'),
-        ),
+        child: Text('ROUTINE SCREEN'),
       ),
     );
   }
