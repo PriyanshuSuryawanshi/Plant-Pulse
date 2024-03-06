@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "807039639077",
+    "project_id": "plantpal-46483",
+    "storage_bucket": "plantpal-46483.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807039639077:android:c65e4ee3a6ec5e887f29cc",
+        "android_client_info": {
+          "package_name": "com.example.plant_pulse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "807039639077-5k3g47qbvpdudcgd0d8tgohe94f0h95n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.plant_pulse",
+            "certificate_hash": "5e31fde0325c56da6aa41eb94e8bf94a1cb03153"
+          }
+        },
+        {
+          "client_id": "807039639077-ct30usgp6h8i766p3mo0i971ho1mfdtf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDskC4l3NXsF_MvyS-p7M3piz5uR9zsD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "807039639077-ct30usgp6h8i766p3mo0i971ho1mfdtf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "807039639077-em8ru4ho8o6o1vdaa1b3u6na6h0lf99t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.plantPulse"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

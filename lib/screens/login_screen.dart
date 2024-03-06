@@ -1,24 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:plant_pulse/components/login_button.dart';
-import 'package:plant_pulse/utils/bottom_navabr.dart';
+import 'package:plant_pulse/components/firebasefunctions.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
+
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  // sign user in method
-  void signUserIn() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const BottomNav(),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,7 +85,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: MediaQuery.of(context).size.height * 0.18,
                 ),
                 LoginButton(
-                  onTap: signUserIn,
+                  onTap: () {
+                    FirebaseFunctions.signUserInWithGoogle(context);
+                  },
                 ),
               ],
             ),
