@@ -7,6 +7,7 @@ final FirebaseAuth _auth = FirebaseAuth.instance;
 final GoogleSignIn _googleSignIn = GoogleSignIn();
 
 class FirebaseFunctions {
+  //SignIn Function
   static Future<void> signUserInWithGoogle(BuildContext context) async {
     final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
 
@@ -43,4 +44,6 @@ class FirebaseFunctions {
       print('An unexpected error occurred: ${e}');
     }
   }
+
+  // read data from firebase
 }

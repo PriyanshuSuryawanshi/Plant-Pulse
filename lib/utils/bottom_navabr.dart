@@ -38,12 +38,24 @@ class _BottomNavState extends State<BottomNav> {
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.timer_outlined), label: 'Routine'),
+              icon: Icon(Icons.home, size: 30.0), // Increased icon size
+              label: 'Home',
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.medication_rounded), label: 'Health'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+              icon:
+                  Icon(Icons.timer_outlined, size: 30.0), // Increased icon size
+              label: 'Routine',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.medication_rounded,
+                  size: 30.0), // Increased icon size
+              label: 'Health',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person, size: 30.0), // Increased icon size
+              label: 'Profile',
+            ),
           ],
           showSelectedLabels: false,
           currentIndex: selectedScreenIndex,

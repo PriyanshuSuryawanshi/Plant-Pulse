@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant_pulse/firebase_options.dart';
 import 'package:plant_pulse/screens/login_screen.dart';
-
 import 'package:firebase_core/firebase_core.dart';
 
 Future<void> main() async {
