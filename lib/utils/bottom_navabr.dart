@@ -24,9 +24,8 @@ class _BottomNavState extends State<BottomNav> {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () =>
-          Future.value(false), // Always return false to prevent back
+    return PopScope(
+      canPop: false, // Always prevent back
       child: Scaffold(
         body: PageView(
           controller: pagecontroller,
