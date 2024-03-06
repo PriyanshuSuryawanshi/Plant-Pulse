@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:plant_pulse/utils/bottom_navabr.dart';
+import 'package:plant_pulse/screens/login_screen.dart';
 
 void main() {
   runApp(const PlantPulseApp());
@@ -16,7 +16,8 @@ class PlantPulseApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green.shade900),
         useMaterial3: true,
       ),
-      home: const BottomNav(),
+      // home: const BottomNav(),
+      home: const LoginScreen(),
     );
   }
 }
