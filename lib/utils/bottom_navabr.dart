@@ -24,34 +24,34 @@ class _BottomNavState extends State<BottomNav> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      //   title: const Text('Plant Pulse'),
-      // ),
-      body: PageView(
-        controller: pagecontroller,
-        children: const [
-          HomeScreen(),
-          RoutineScreen(),
-          HealthScreen(),
-          ProfileScreen()
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.timer_outlined), label: 'Routine'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.medication_rounded), label: 'Health'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
-        ],
-        showSelectedLabels: false,
-        currentIndex: selectedScreenIndex,
-        selectedItemColor: Colors.green,
-        unselectedItemColor: Colors.grey,
-        onTap: onTapped,
+    return WillPopScope(
+      onWillPop: () =>
+          Future.value(false), // Always return false to prevent back
+      child: Scaffold(
+        body: PageView(
+          controller: pagecontroller,
+          children: const [
+            HomeScreen(),
+            RoutineScreen(),
+            HealthScreen(),
+            ProfileScreen()
+          ],
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.timer_outlined), label: 'Routine'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.medication_rounded), label: 'Health'),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          ],
+          showSelectedLabels: false,
+          currentIndex: selectedScreenIndex,
+          selectedItemColor: Colors.green,
+          unselectedItemColor: Colors.grey,
+          onTap: onTapped,
+        ),
       ),
     );
   }
