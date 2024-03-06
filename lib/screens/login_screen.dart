@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:plant_pulse/components/my_button.dart';
+import 'package:plant_pulse/components/login_button.dart';
 import 'package:plant_pulse/utils/bottom_navabr.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -93,7 +93,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.18,
                 ),
-                MyButton(
+                LoginButton(
                   onTap: signUserIn,
                 ),
               ],
