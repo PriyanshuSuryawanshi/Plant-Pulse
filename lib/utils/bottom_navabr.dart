@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_pulse/database/firebase_database.dart';
 import 'package:plant_pulse/screens/health_screen.dart';
 import 'package:plant_pulse/screens/home_screen.dart';
 import 'package:plant_pulse/screens/profile_screen.dart';
@@ -14,6 +15,13 @@ class BottomNav extends StatefulWidget {
 class _BottomNavState extends State<BottomNav> {
   int selectedScreenIndex = 0;
   PageController pagecontroller = PageController();
+  final database = FirebaseDatabase();
+
+  @override
+  void initState() {
+    super.initState();
+    database.fetchAndPrintPlantData();
+  }
 
   void onTapped(int index) {
     setState(() {
